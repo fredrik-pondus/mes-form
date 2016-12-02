@@ -1,0 +1,264 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Make Equal Story Form\n"
+"POT-Creation-Date: 2016-10-21 11:14+0100\n"
+"PO-Revision-Date: 2016-10-21 11:14+0100\n"
+"Last-Translator: Fredrik Edvardsson <fredrik@pspondus.se>\n"
+"Language-Team: Fredrik Edvardsson <fredrik@pspondus.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: mes-form.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: mes-form.php:59
+msgid "Du måste fylla i e-post."
+msgstr ""
+
+#: mes-form.php:60
+msgid "Du måste ange en giltig e-postadress."
+msgstr ""
+
+#: mes-form.php:63
+msgid "Du måste fylla i rubrik."
+msgstr ""
+
+#: mes-form.php:66
+msgid "Du måste fylla i din berättelse."
+msgstr ""
+
+#: mes-form.php:69
+msgid "Du måste fylla i en kort version av din berättelse."
+msgstr ""
+
+#: mes-form.php:72
+msgid "Du måste ange var berättelsen utspelar sig."
+msgstr ""
+
+#: mes-form.php:75
+msgid "Du måste ange vad berättelsen handlar om."
+msgstr ""
+
+#: mes-form.php:78
+msgid "Du måste ange hur du upplever berättelsen."
+msgstr ""
+
+#: mes-form.php:81
+msgid "Du måste godkänna villkoren."
+msgstr ""
+
+#: mes-form.php:118
+msgid "Tack för ditt bidrag."
+msgstr ""
+
+#: mes-form.php:127 mes-form.php:342
+msgid ""
+"Formuläret innehåller saknade eller felaktigt ifyllda fält. Titta igenom "
+"dina uppgifter och försök igen."
+msgstr ""
+
+#: mes-form.php:144
+msgid "Din e-postadress"
+msgstr ""
+
+#: mes-form.php:145
+msgid "E-postadress"
+msgstr ""
+
+#: mes-form.php:151
+msgid "Berättelsens rubrik"
+msgstr ""
+
+#: mes-form.php:152
+msgid "En gång…"
+msgstr ""
+
+#: mes-form.php:158
+msgid "Din berättelse"
+msgstr ""
+
+#: mes-form.php:165
+msgid "Berättelsen i korthet"
+msgstr ""
+
+#: mes-form.php:172
+msgid "Var hände detta?"
+msgstr ""
+
+#: mes-form.php:175
+msgid ""
+"Bacon ipsum dolor amet cupim ball tip brisket tenderloin capicola. Brisket "
+"doner spare ribs bacon. Ball tip fatback prosciutto burgdoggen corned beef."
+msgstr ""
+
+#: mes-form.php:184
+msgid "Skola"
+msgstr ""
+
+#: mes-form.php:189
+msgid "Förening"
+msgstr ""
+
+#: mes-form.php:194
+msgid "Hemma"
+msgstr ""
+
+#: mes-form.php:199
+msgid "I kompisgänget"
+msgstr ""
+
+#: mes-form.php:204
+msgid "Internet"
+msgstr ""
+
+#: mes-form.php:209
+msgid "Fritidsgård"
+msgstr ""
+
+#: mes-form.php:214
+msgid "Jobbet"
+msgstr ""
+
+#: mes-form.php:219
+msgid "Utomhus"
+msgstr ""
+
+#: mes-form.php:224
+msgid "Idrottsplats"
+msgstr ""
+
+#: mes-form.php:229
+msgid "Omklädningsrum"
+msgstr ""
+
+#: mes-form.php:234
+msgid "Kollektivtrafiken"
+msgstr ""
+
+#: mes-form.php:239 mes-form.php:295
+msgid "Annat"
+msgstr ""
+
+#: mes-form.php:248
+msgid "Vad handlar berättelsen om?"
+msgstr ""
+
+#: mes-form.php:251
+msgid ""
+"Bacon ipsum dolor amet pork chop beef pancetta rump, frankfurter flank "
+"capicola pork loin shank kielbasa chuck. Pork belly corned beef sirloin "
+"shank turkey, flank andouille kevin biltong venison brisket."
+msgstr ""
+
+#: mes-form.php:260
+msgid "Kön"
+msgstr ""
+
+#: mes-form.php:265
+msgid "Könsuttryck"
+msgstr ""
+
+#: mes-form.php:270
+msgid "Sexualitet"
+msgstr ""
+
+#: mes-form.php:275
+msgid "Funktion"
+msgstr ""
+
+#: mes-form.php:280
+msgid "Ålder"
+msgstr ""
+
+#: mes-form.php:285
+msgid "Tro/religion"
+msgstr ""
+
+#: mes-form.php:290
+msgid "Etnicitet"
+msgstr ""
+
+#: mes-form.php:304
+msgid "Hur upplever du din berättelse?"
+msgstr ""
+
+#: mes-form.php:307
+msgid ""
+"Handlar berättelsen om något bra som gjorts kryssar du i positiv. Handlar "
+"din berättelse om något jobbigt du har upplevt kryssar du för negativ. Din "
+"berättelse kan också vara både positiv och negativ."
+msgstr ""
+
+#: mes-form.php:316
+msgid "Positiv"
+msgstr ""
+
+#: mes-form.php:321
+msgid "Negativ"
+msgstr ""
+
+#: mes-form.php:330
+msgid ""
+"Genom att skicka in din berättelse är du helt anonym. Däremot behöver vi "
+"mplector contrpicus colluceo servitium ob lis adparet, beto permutio pruna. "
+"Obliviosus cuci, fimus anthropocentrism cantuaria quintum sandyx age "
+"diurnalismus bracchialis inaniloquus jubo lixa. Novello simulus "
+"inexpugnabilis superlino glisco avis"
+msgstr ""
+
+#: mes-form.php:334
+msgid "Godkänn"
+msgstr ""
+
+#: mes-form.php:339
+msgid "Skicka in min berättelse"
+msgstr ""
+
+#: mes-form.php:361
+msgid "Skicka din berättelse"
+msgstr ""
+
+#: mes-form.php:362
+msgid "Behandlar formulär..."
+msgstr ""
+
+#: mes-form.php:363
+msgid "Mer information"
+msgstr ""
+
+#: mes-form.php:364
+msgid "Dölj"
+msgstr ""
+
+#: mes-form.php:517
+msgid "Otillåten access. Ladda om sidan och försök igen."
+msgstr ""
+
+#: mes-form.php:525
+msgid "Något gick fel och vi kunde inte spara ditt bidrag. Försök igen senare."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Make Equal Story Form"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://medpondus.se"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Add functionality for receiving and handling visitor stories."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Fredrik Edvardsson @ Pondus Kommunikation"
+msgstr ""
