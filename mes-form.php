@@ -28,6 +28,10 @@ if ( ! defined( 'MES_FORM_VER' ) ) {
 
 class Plugin {
 	static $instance = false;
+	private $result = array(
+		'success' => false,
+		'errors'  => array()
+	);
 
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'init' ) );
@@ -43,7 +47,7 @@ class Plugin {
 
 
 	public function init() {
-		add_action( 'init', array( $this, 'shortcode_form' ) );
+		add_action( 'init', array( $this, 'shortcode_form_init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
 		add_action( 'wp_ajax_nopriv_mes_submit_story', array( $this, 'handle_ajax_form_submission' ) );
 		add_action( 'wp_ajax_mes_submit_story', array( $this, 'handle_ajax_form_submission' ) );
@@ -89,27 +93,28 @@ class Plugin {
 	}
 
 
-	public function shortcode_form() {
-
+	public function shortcode_form_init() {
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+			return;
+		}
+		
 		$posted = isset( $_SERVER['REQUEST_METHOD'] ) && strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post';
-		$completed = isset( $_GET['completed'] ) && $_GET['completed'] === 'true';
-
-		$result = array(
-			'success' => false,
-			'errors'  => array()
-		);
 
 		if ( $posted ) {
-			$result = apply_filters( 'mes-process-form', $result );
+			$this->result = apply_filters( 'mes-process-form', null );
 
-			if ( $result['success'] && ( !defined('DOING_AJAX') || !DOING_AJAX )  ) {
+			if ( $this->result['success'] ) {
 				header( 'Location:' . get_permalink() . '?completed=true' ); // Redirect to prevent resubmission
 				exit;
 			}
 		}
+	}
+
+
+	public function shortcode_form() {
+		$completed = isset( $_GET['completed'] ) && $_GET['completed'] === 'true';
 
 		ob_start();
-
 		?>
 
 		<?php if ( $completed ) : ?>
@@ -120,13 +125,13 @@ class Plugin {
 
 		<?php else: ?>
 
-			<?php if ( ! empty( $result['errors'] ) ) : ?>
+			<?php if ( ! empty( $this->result['errors'] ) ) : ?>
 
 				<div class="mes-validation-warning mes-validation-warning--visible">
 					<p><?php _e( 'Formuläret innehåller saknade eller felaktigt ifyllda fält. Titta igenom dina uppgifter och försök igen.', 'mes-form' ) ?></p>
 
 					<ul class="story-form__errors">
-						<?php foreach ( $result['errors'] as $error ) : ?>
+						<?php foreach ( $this->result['errors'] as $error ) : ?>
 						<li><?php echo $error ?></li>
 						<?php endforeach; ?>
 					</ul>
@@ -539,7 +544,7 @@ class Plugin {
 	private function save_story( $submission ) {
 		// HANDLE DATA TO YOUR HEART'S CONTENT
 
-		//file_put_contents( dirname( __FILE__ ) . '/test.txt', print_r( $submission, true ) ); // Output to temp file for testing
+		// file_put_contents( dirname( __FILE__ ) . '/test.txt', print_r( $submission, true ), FILE_APPEND | LOCK_EX ); // Output to temp file for testing
 
 		// Return boolean depending on success of save
 		return true;
